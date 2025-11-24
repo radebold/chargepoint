@@ -7,7 +7,7 @@
       "items": {
         "interval": {
           "type": "number",
-          "label": "Abrufintervall (Minuten)",
+          "label": "Abrufintervall",
           "default": 10
         }
       }
@@ -27,7 +27,7 @@
             },
             {
               "type": "text",
-              "label": "ID (deviceId)",
+              "label": "ID",
               "attr": "id"
             },
             {
