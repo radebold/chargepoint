@@ -1,1 +1,0 @@
-systemDictionary={'chargepoint':{'en':'ChargePoint','de':'ChargePoint'}};
