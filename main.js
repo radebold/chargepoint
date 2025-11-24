@@ -9,6 +9,7 @@ class Chargepoint extends utils.Adapter {
 
     async onReady() {
         const intervalMs = (this.config.interval || 10) * 60 * 1000;
+        this.log.info(`Intervall: ${intervalMs/60000} Minuten`);
         this.poll();
         this.pollInterval = setInterval(() => this.poll(), intervalMs);
     }
@@ -26,10 +27,17 @@ class Chargepoint extends utils.Adapter {
                 await this.setObjectNotExistsAsync(base, { type:'channel', common:{name:s.name}, native:{} });
                 await this.setStateAsync(`${base}.raw`, { val: JSON.stringify(data), ack: true });
 
-            } catch (e) {}
+                const body = data?.body || {};
+                await this.setStateAsync(`${base}.status`, { val: body.status || "", ack: true });
+                await this.setStateAsync(`${base}.levelName`, { val: body.levelName || "", ack: true });
+
+            } catch (e) {
+                this.log.error(`Fehler bei ${s.id}: ${e}`);
+            }
         }
     }
 
-    onUnload(cb) { try { if (this.pollInterval) clearInterval(this.pollInterval); cb(); } catch(e){cb();} }
+    onUnload(cb) { try { if (this.pollInterval) clearInterval(this.pollInterval); cb(); } catch(e){ cb(); } }
 }
+
 module.exports = (o) => new Chargepoint(o);

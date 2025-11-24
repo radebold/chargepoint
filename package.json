@@ -1,10 +1,11 @@
 {
   "name": "iobroker.chargepoint",
-  "version": "0.0.1",
-  "description": "ChargePoint adapter",
+  "version": "0.0.2",
+  "description": "ChargePoint monitoring adapter for ioBroker",
   "main": "main.js",
   "author": "Thomas",
   "license": "MIT",
+  "icon": "chargepoint.png",
   "dependencies": {
     "axios": "^1.6.0"
   }
