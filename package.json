@@ -1,6 +1,6 @@
 {
   "name": "iobroker.chargepoint",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "ChargePoint monitoring adapter for ioBroker",
   "author": "Thomas",
   "license": "MIT",

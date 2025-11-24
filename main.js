@@ -16,6 +16,9 @@ class Chargepoint extends utils.Adapter {
 
             this.log.info(`ChargePoint Adapter gestartet – Intervall: ${intervalMinutes} Minuten`);
 
+            // initial connection state
+            await this.setStateAsync('info.connection', { val: false, ack: true });
+
             // Initialer Poll
             await this.poll();
 
@@ -23,11 +26,6 @@ class Chargepoint extends utils.Adapter {
             this.pollInterval = setInterval(() => {
                 this.poll().catch(err => this.log.error(`Poll Fehler: ${err}`));
             }, intervalMs);
-
-            // Verbindung auf "verbunden" setzen, wenn mindestens eine Station konfiguriert ist
-            const stations = this.config.stationsList || [];
-            const anyActive = stations.some(s => s && s.active);
-            await this.setStateAsync('info.connection', { val: anyActive, ack: true });
 
         } catch (err) {
             this.log.error(`onReady Fehler: ${err}`);
@@ -110,7 +108,7 @@ class Chargepoint extends utils.Adapter {
                 });
                 await this.setStateAsync(`${base}.levelName`, { val: body.levelName || '', ack: true });
 
-                anySuccess = True;
+                anySuccess = true;
                 this.log.info(`Station ${s.id} (${s.name || ''}) erfolgreich abgefragt`);
             } catch (err) {
                 this.log.error(`Fehler bei Station ${s && s.id ? s.id : 'unbekannt'}: ${err}`);

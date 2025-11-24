@@ -8,10 +8,11 @@ Ein ioBroker-Adapter zum Abfragen von ChargePoint-Ladestationen.
 - Speichert Rohdaten sowie ausgewählte Datenpunkte (Status, LevelName)
 - JSON-Config im Admin
 
-## Installation (manuell)
-1. ZIP-Datei in ein Verzeichnis entpacken
-2. Repository zu GitHub pushen **oder**
-3. Im ioBroker Admin unter **Adapter → Eigene → ZIP hochladen** installieren
+## Installation über ZIP
+1. Diese ZIP-Datei herunterladen.
+2. Im ioBroker Admin unter **Adapter → Eigene Adapter → ... (drei Punkte) → aus Datei installieren** auswählen.
+3. Die ZIP-Datei hochladen und installieren.
+4. Eine Instanz von `chargepoint` anlegen und konfigurieren.
 
 ## Konfiguration
 ### Ladestationen
