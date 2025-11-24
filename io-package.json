@@ -1,53 +1,10 @@
 {
   "common": {
     "name": "chargepoint",
-    "version": "0.0.3",
-    "news": {
-      "0.0.3": {
-        "en": "Switched to JSON config UI and added ChargePoint API polling.",
-        "de": "Umstellung auf JSON-Konfig-UI und Hinzuf\u00fcgen des ChargePoint-API-Pollings."
-      }
-    },
-    "title": "ChargePoint",
-    "titleLang": {
-      "en": "ChargePoint adapter",
-      "de": "ChargePoint Adapter"
-    },
-    "desc": {
-      "en": "Reads status of ChargePoint charging stations",
-      "de": "Liest den Status von ChargePoint-Ladestationen aus"
-    },
+    "version": "0.0.1",
+    "title": "ChargePoint Adapter",
     "platform": "Javascript/Node.js",
-    "mode": "daemon",
-    "icon": "chargepoint.png",
-    "materialize": false,
-    "enabled": true,
-    "loglevel": "info",
-    "keywords": [
-      "chargepoint",
-      "ev",
-      "charging",
-      "ladestation"
-    ],
-    "type": "energy",
-    "messagebox": false,
-    "compact": true,
-    "connectionType": "cloud",
-    "dataSource": "poll",
-    "adminUI": {
-      "config": "json"
-    },
-    "native": {
-      "stations": [],
-      "pollInterval": 5,
-      "debug": false
-    }
+    "mode": "daemon"
   },
-  "native": {
-    "stations": [],
-    "pollInterval": 5,
-    "debug": false
-  },
-  "objects": [],
-  "instanceObjects": []
+  "native": {}
 }
