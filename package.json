@@ -1,21 +1,8 @@
 {
   "name": "iobroker.chargepoint",
-  "version": "0.0.6",
-  "description": "ChargePoint monitoring adapter for ioBroker",
-  "author": "Thomas",
-  "license": "MIT",
+  "version": "0.0.7",
   "main": "main.js",
-  "homepage": "https://github.com/radebold/chargepoint",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/radebold/chargepoint.git"
-  },
-  "keywords": [
-    "ioBroker",
-    "chargepoint",
-    "ev",
-    "adapter"
-  ],
+  "license": "MIT",
   "dependencies": {
     "@iobroker/adapter-core": "^3.0.0",
     "axios": "^1.6.0"

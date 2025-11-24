@@ -1,34 +1,19 @@
 {
   "common": {
     "name": "chargepoint",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "title": "ChargePoint",
-    "titleLang": {
-      "en": "ChargePoint adapter",
-      "de": "ChargePoint Adapter"
-    },
-    "desc": {
-      "en": "Monitors ChargePoint charging stations",
-      "de": "\u00dcberwacht ChargePoint-Ladestationen"
-    },
-    "authors": [
-      "Thomas"
-    ],
-    "license": "MIT",
-    "platform": "Javascript/Node.js",
-    "main": "main.js",
     "icon": "chargepoint.png",
     "extIcon": "https://raw.githubusercontent.com/radebold/chargepoint/main/admin/chargepoint.png",
     "enabled": true,
     "loglevel": "info",
     "mode": "daemon",
     "type": "energy",
-    "connectionType": "cloud",
-    "dataSource": "poll",
     "compact": false,
     "adminUI": {
       "config": "json"
-    }
+    },
+    "main": "main.js"
   },
   "native": {
     "interval": 10,
@@ -48,8 +33,8 @@
       "type": "state",
       "common": {
         "name": "Connection status",
-        "role": "indicator.connected",
         "type": "boolean",
+        "role": "indicator.connected",
         "read": true,
         "write": false,
         "def": false
