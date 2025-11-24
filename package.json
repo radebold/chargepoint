@@ -1,0 +1,32 @@
+{
+  "name": "iobroker.chargepoint",
+  "version": "0.0.3",
+  "description": "ioBroker adapter to read status of ChargePoint charging stations",
+  "author": {
+    "name": "Thomas (custom)",
+    "email": "noreply@example.com"
+  },
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"No tests\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radebold/iobroker.chargepoint"
+  },
+  "keywords": [
+    "iobroker",
+    "chargepoint",
+    "charging",
+    "ev"
+  ],
+  "dependencies": {
+    "@iobroker/adapter-core": "^3.0.0",
+    "axios": "^1.7.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=16"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "type": "panel",
+  "items": {
+    "header": {
+      "type": "staticText",
+      "text": {
+        "en": "Configure the ChargePoint stations you want to monitor.",
+        "de": "Konfiguriere die ChargePoint-Ladestationen, die \u00fcberwacht werden sollen."
+      }
+    },
+    "stations": {
+      "type": "table",
+      "label": {
+        "en": "Charging stations",
+        "de": "Ladestationen"
+      },
+      "help": {
+        "en": "Add one row per ChargePoint station. You can find the deviceId in the ChargePoint map URL.",
+        "de": "F\u00fcge pro ChargePoint-Ladestation eine Zeile hinzu. Die deviceId findest du in der URL der ChargePoint-Karte."
+      },
+      "sortable": false,
+      "items": [
+        {
+          "type": "text",
+          "attr": "id",
+          "title": {
+            "en": "Device ID",
+            "de": "Device-ID"
+          },
+          "filter": false
+        },
+        {
+          "type": "text",
+          "attr": "name",
+          "title": {
+            "en": "Name",
+            "de": "Name"
+          },
+          "filter": false
+        }
+      ],
+      "default": []
+    },
+    "pollInterval": {
+      "type": "number",
+      "label": {
+        "en": "Polling interval (minutes)",
+        "de": "Abfrageintervall (Minuten)"
+      },
+      "min": 1,
+      "max": 1440,
+      "default": 5
+    },
+    "debug": {
+      "type": "checkbox",
+      "label": {
+        "en": "Enable debug logging",
+        "de": "Debug-Logging aktivieren"
+      },
+      "default": false
+    }
+  }
+}
