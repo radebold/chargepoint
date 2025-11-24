@@ -1,13 +1,7 @@
 {
   "common": {
     "name": "chargepoint",
-    "version": "0.0.4",
-    "news": {
-      "0.0.4": {
-        "en": "Fixed boolean bug and improved stability",
-        "de": "Boolean-Fehler behoben und Stabilit\u00e4t verbessert"
-      }
-    },
+    "version": "0.0.6",
     "title": "ChargePoint",
     "titleLang": {
       "en": "ChargePoint adapter",
@@ -20,26 +14,18 @@
     "authors": [
       "Thomas"
     ],
-    "keywords": [
-      "chargepoint",
-      "ev",
-      "charging",
-      "ioBroker"
-    ],
     "license": "MIT",
     "platform": "Javascript/Node.js",
     "main": "main.js",
     "icon": "chargepoint.png",
+    "extIcon": "https://raw.githubusercontent.com/radebold/chargepoint/main/admin/chargepoint.png",
     "enabled": true,
-    "extIcon": "",
-    "readme": "https://github.com/radebold/chargepoint/blob/master/README.md",
     "loglevel": "info",
     "mode": "daemon",
     "type": "energy",
     "connectionType": "cloud",
     "dataSource": "poll",
     "compact": false,
-    "materialize": true,
     "adminUI": {
       "config": "json"
     }
@@ -48,7 +34,6 @@
     "interval": 10,
     "stationsList": []
   },
-  "objects": [],
   "instanceObjects": [
     {
       "_id": "info",
