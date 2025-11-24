@@ -50,3 +50,5 @@ class Chargepoint extends utils.Adapter {
 }
 
 module.exports = o => new Chargepoint(o);
+console.log('### chargepoint main.js wird von Node geladen ###');
+
