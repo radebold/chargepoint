@@ -38,7 +38,7 @@
     "type": "energy",
     "connectionType": "cloud",
     "dataSource": "poll",
-    "compact": true,
+    "compact": false,
     "materialize": true,
     "adminUI": {
       "config": "json"
