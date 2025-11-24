@@ -8,6 +8,8 @@
         "interval": {
           "type": "number",
           "label": "Abrufintervall (Minuten)",
+          "min": 1,
+          "max": 1440,
           "default": 10
         }
       }
@@ -27,7 +29,7 @@
             },
             {
               "type": "text",
-              "label": "ID",
+              "label": "ID (deviceId)",
               "attr": "id"
             },
             {

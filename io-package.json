@@ -1,0 +1,75 @@
+{
+  "common": {
+    "name": "chargepoint",
+    "version": "0.0.3",
+    "news": {
+      "0.0.3": {
+        "en": "Initial version",
+        "de": "Erste Version"
+      }
+    },
+    "title": "ChargePoint",
+    "titleLang": {
+      "en": "ChargePoint adapter",
+      "de": "ChargePoint Adapter"
+    },
+    "desc": {
+      "en": "Monitors ChargePoint charging stations",
+      "de": "\u00dcberwacht ChargePoint-Ladestationen"
+    },
+    "authors": [
+      "Thomas"
+    ],
+    "keywords": [
+      "chargepoint",
+      "ev",
+      "charging",
+      "ioBroker"
+    ],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "main": "main.js",
+    "icon": "chargepoint.png",
+    "enabled": true,
+    "extIcon": "",
+    "readme": "https://github.com/radebold/chargepoint/blob/master/README.md",
+    "loglevel": "info",
+    "mode": "daemon",
+    "type": "energy",
+    "connectionType": "cloud",
+    "dataSource": "poll",
+    "compact": true,
+    "materialize": true,
+    "adminUI": {
+      "config": "json"
+    }
+  },
+  "native": {
+    "interval": 10,
+    "stationsList": []
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "name": "Connection status",
+        "role": "indicator.connected",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
+}
