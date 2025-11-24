@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "chargepoint",
-    "version": "0.0.1",
+    "version": "0.0.6",
     "title": "ChargePoint Adapter",
     "platform": "Javascript/Node.js",
     "mode": "daemon"

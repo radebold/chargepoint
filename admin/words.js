@@ -1,1 +1,1 @@
-systemDictionary = { 'chargepoint': { 'en':'ChargePoint','de':'ChargePoint' } };
+systemDictionary={'chargepoint':{'en':'ChargePoint','de':'ChargePoint'}};
